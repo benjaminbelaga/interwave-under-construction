@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "index.html": {
+      "maxDuration": 10
+    }
+  },
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "domains": ["interwave.live", "www.interwave.live"]
+}
