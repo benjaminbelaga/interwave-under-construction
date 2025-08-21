@@ -1,0 +1,32 @@
+# Interwave - Under Construction
+# Robots.txt for maintenance period
+
+User-agent: *
+Disallow: /
+
+# Allow access to the main page for indexing the "under construction" message
+Allow: /index.html
+Allow: /favicon.ico
+
+# Prevent crawling of these file types during construction
+Disallow: *.log$
+Disallow: *.bak$
+Disallow: *.backup$
+Disallow: *.old$
+Disallow: *.tmp$
+
+# Common directories to block
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/uploads/
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /temp/
+
+# Crawl delay to reduce server load during maintenance
+Crawl-delay: 86400
+
+# Sitemap (update when site is back online)
+# Sitemap: https://interwave.com/sitemap.xml

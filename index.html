@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interwave - Under Construction</title>
+    <meta name="description" content="Interwave is coming back soon with a brand new website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #000000;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            color: #ffffff;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 600px;
+            width: 100%;
+            z-index: 2;
+            position: relative;
+        }
+
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: logoFloat 3s ease-in-out infinite;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 300;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            font-weight: 400;
+            margin-bottom: 3rem;
+            opacity: 0.9;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+
+        .progress-container {
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 25px;
+            padding: 4px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .progress-bar {
+            height: 8px;
+            background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.8));
+            border-radius: 20px;
+            width: 0%;
+            animation: progressFill 3s ease-out 1s both;
+        }
+
+        .coming-soon {
+            font-size: 1rem;
+            font-weight: 400;
+            opacity: 0.8;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.8s both;
+        }
+
+        .contact-info {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            animation: fadeInUp 1s ease-out 1s both;
+        }
+
+        .contact-info a {
+            color: #ffffff;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+
+        /* Background animation */
+        .bg-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .shape:nth-child(2) {
+            width: 120px;
+            height: 120px;
+            left: 70%;
+            animation-delay: 7s;
+        }
+
+        .shape:nth-child(3) {
+            width: 60px;
+            height: 60px;
+            left: 40%;
+            animation-delay: 3s;
+        }
+
+        .shape:nth-child(4) {
+            width: 100px;
+            height: 100px;
+            left: 85%;
+            animation-delay: 10s;
+        }
+
+        /* Animations */
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes progressFill {
+            from { width: 0%; }
+            to { width: 75%; }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.1;
+            }
+            90% {
+                opacity: 0.1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 2rem;
+            }
+            
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .subtitle {
+                font-size: 1rem;
+            }
+            
+            .logo {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .logo-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background floating shapes -->
+    <div class="bg-shapes">
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+
+    <div class="container">
+        <!-- Logo placeholder -->
+        <div class="logo">
+            <div class="logo-text">IW</div>
+        </div>
+
+        <!-- Main content -->
+        <h1>Under Construction</h1>
+        
+        <p class="subtitle">
+            We are coming back soon with a brand new website
+        </p>
+
+        <!-- Progress bar -->
+        <div class="progress-container">
+            <div class="progress-bar"></div>
+        </div>
+
+        <p class="coming-soon">
+            Our team is working hard to bring you an amazing experience
+        </p>
+
+        <!-- Contact info -->
+        <div class="contact-info">
+            For inquiries: <a href="mailto:booking@interwave.live">booking@interwave.live</a>
+        </div>
+    </div>
+
+    <script>
+        // Add subtle interaction on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create additional floating particles on mouse move
+            let mouseTimeout;
+            
+            document.addEventListener('mousemove', function(e) {
+                clearTimeout(mouseTimeout);
+                mouseTimeout = setTimeout(() => {
+                    createParticle(e.clientX, e.clientY);
+                }, 150);
+            });
+
+            function createParticle(x, y) {
+                const particle = document.createElement('div');
+                particle.style.cssText = `
+                    position: fixed;
+                    width: 4px;
+                    height: 4px;
+                    background: rgba(255, 255, 255, 0.6);
+                    border-radius: 50%;
+                    pointer-events: none;
+                    z-index: 1000;
+                    left: ${x}px;
+                    top: ${y}px;
+                    animation: particleFade 1s ease-out forwards;
+                `;
+                
+                document.body.appendChild(particle);
+                
+                setTimeout(() => {
+                    particle.remove();
+                }, 1000);
+            }
+
+            // Add particle animation CSS
+            const style = document.createElement('style');
+            style.textContent = `
+                @keyframes particleFade {
+                    0% {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                    100% {
+                        opacity: 0;
+                        transform: scale(0) translateY(-20px);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+
+            // Animate progress bar on load
+            setTimeout(() => {
+                const progressBar = document.querySelector('.progress-bar');
+                if (progressBar) {
+                    progressBar.style.transition = 'width 2s ease-out';
+                }
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
